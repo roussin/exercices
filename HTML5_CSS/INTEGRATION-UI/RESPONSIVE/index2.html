@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portefolio</title>
+    <style>
+        /* => RESET ********************************************* */
+
+        * {
+            box-sizing: border-box; 
+            padding: 0px;
+            outline: none;
+            border: none;
+            list-style: none;
+        }
+        ul, li{
+            padding: 0; 
+            margin: 0; 
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover{
+            background: ;
+        }
+        .stopFloat::after{
+            display:block; 
+            content: ""; 
+            clear: both;
+        }
+        /* ****************************************************<= */
+
+        body {
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;  
+            background: #fff;
+            font-size: 14px; 
+            /* color: #777; */
+            line-height: 1.7em;
+            font-weight: 400;
+            /* display: block; */
+        }
+
+    </style>
+</head>
+<body>
+
+    <style type="text/css">
+
+        /* Conteneur principal de la page */
+        .page-wrapper{
+            width: 100%;
+            min-width: 300px; 
+            height: 100vh;
+            background: url("images/pageWrapper.jpg") no-repeat fixed;
+            background-size: cover;
+            position: relative;
+        }
+
+        /* ** HEADER ********************************************* */
+
+        .main-header-bar{
+            position: absolute;
+            background: rgba(7, 7, 7, 0.1);
+            width: 100%;
+            height: 10vh;
+        }
+
+        .header-bar-center {
+            position: absolute;
+            width: 90%;
+            height: 100%;
+        }
+
+        .logo-box{  
+            position: absolute;
+            left: 0;  
+            width: 100px;
+            height: 100%;
+            background: rgba(131, 7, 7, 0.685);
+        }
+
+            .logo{
+                /* display: flex;
+                justify-content: center;
+                align-items: center; */
+                margin: 0 auto;
+                color: rgba(0, 0, 0, 1);
+                font-size: 4em;
+                letter-spacing: -5px;
+                font-weight: 700;
+                /* width: 100%; */
+                height: 100%;
+            }
+
+        .reorder{
+            width: 85px;
+            height: 100%;
+            position: absolute;
+            right: 0; 
+        }
+        
+        .menu-box{
+            width: 30%;
+            height: 100vh;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        .menu>a {
+            padding: 10% 0;
+            text-align: center;
+            font-size: 1.3em;
+            color: rgba(0, 0, 0, 0.637);
+            text-transform: uppercase;
+            border-bottom: rgba(0, 0, 0, 0.637) 1px solid;
+        }
+        /* Le header principal */
+       
+        /* Gestion menu */
+        /* .menu{ visibility: hidden;}  */
+        .menu-checkbox:checked ~.menu{ visibility: visible;}
+        .menu-checkbox{display: none;}
+
+        /* .menu{display: flex; flex-direction: column; */
+
+        /* Animation icone */
+        /* .iconeMenu{ width: 35px; height: 35px; background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.9)); display: block; border-radius: 5px; position: relative;}
+        .iconeMenu div{ width: 60%; height: 10%; background: #fff; position: absolute; top: 45%; left: 20%;}
+        .iconeMenu div::after, .iconeMenu div::before{ content: ""; width: 100%; height: 100%; background: #fff; position: absolute; transition: all 0.3s;}
+        .iconeMenu div::after{ top: -200%; transform-origin: 11% 100%;}
+        .iconeMenu div::before{ top: 200%; transform-origin: 0 0; }
+
+        .menu-checkbox:checked ~ .iconeMenu div{ background: rgba(0,0,0,0);}
+        .menu-checkbox:checked ~ .iconeMenu div::after{ transform: rotate(45deg);}
+        .menu-checkbox:checked ~ .iconeMenu div::before{ transform: rotate(-45deg);} */
+
+        /* MEDIA QUERY ********************************************** */
+
+        /* Si < 990px */
+        /* @media screen and (max-width: 990px) {
+            .menu{ visibility: hidden;}
+        } */
+
+        /* @media screen and (max-width: 1190px) {
+            .page-wrapper{overflow: hidden;}
+        } */
+    </style>
+
+    <div class="page-wrapper">
+        <header class="main-header-bar">
+            <div class="header-bar-center stopFloat">
+                <div class="logo-box">
+                    <div class="logo">
+                        <!-- <img src="logo/logo.png" alt="WebDeveloppeur"> -->CR
+                    </div>
+                </div>
+                <nav class="menu-box">
+                    <input type="checkbox" class="menu-checkbox" id="menu-checkbox">
+                    <label for="menu-checkbox" class="iconeMenu"><img class="reorder" src="icones/reorder.svg";></label>
+                    <div class="menu">
+                        <a class="menu-link" href="#">Présentation</a>
+                        <a class="menu-link" href="#">Compétences</a>
+                        <a class="menu-link" href="#">Projets</a>
+                        <a class="menu-link" href="#">CV</a>
+                        <a class="menu-link" href="#">Contact</a>
+                    </div>
+                    <!-- Nav Toggler -->
+                    <!-- <div class="nav-toggler">
+                        <button class="toggler-btn">
+                            <span class="bar bar-one"></span>
+                            <span class="bar bar-two"></span>
+                            <span class="bar bar-three"></span>
+                        </button>
+                    </div> -->
+
+                </nav>
+            </div>
+        </header>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+@font-face {
+    font-family:'the_constellation_of_heraclIt';
+    src:url('assets/css/02_-_Le_formatage_du_texte_en_CSS/the_constellation_of_heracles-webfont.eot'); /* IE 9 et + */
+    src:url('assets/css/02_-_Le_formatage_du_texte_en_CSS/the_constellation_of_heracles-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('assets/css/02_-_Le_formatage_du_texte_en_CSS/the_constellation_of_heracles-webfont.woff2') format('woff2'),
+        url('assets/css/02_-_Le_formatage_du_texte_en_CSS/the_constellation_of_heracles-webfont.woff') format('woff'),
+        url('assets/css/02_-_Le_formatage_du_texte_en_CSS/the_constellation_of_heracles-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('assets/css/02_-_Le_formatage_du_texte_en_CSS/the_constellation_of_heracles-webfont.svg#the_constellation_of_heraclIt') format('svg'); /* iOS */
+    font-weight:normal;
+    font-style:normal;
+}

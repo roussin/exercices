@@ -1,0 +1,90 @@
+body {
+    background: #f2d2a1;
+  }
+  
+  .container {
+    margin: auto;
+    position: relative;
+    width: 600px;
+    height: 500px;
+    margin-top: 2%;
+    background: transparent;
+  }
+  
+  .face {
+    -webkit-clip-path: polygon(41% 32%, 59% 32%, 84% 1%, 79% 51%, 90% 76%, 50% 99%, 10% 76%, 21% 51%, 16% 1%);
+    clip-path: polygon(41% 32%, 59% 32%, 84% 1%, 79% 51%, 90% 76%, 50% 99%, 10% 76%, 21% 51%, 16% 1%);
+    background: black;
+    width: 600px;
+    height: 500px;
+  }
+  
+  .faceborder {
+    -webkit-clip-path: polygon(40% 36%, 61% 36%, 80% 11%, 75% 52%, 85% 74%, 50% 94%, 15% 75%, 25% 52%, 20% 11%);
+    clip-path: polygon(40% 36%, 61% 36%, 80% 11%, 75% 52%, 85% 74%, 50% 94%, 15% 75%, 25% 52%, 20% 11%);
+    width: 600px;
+    height: 500px;
+    background: #ff6332;
+    position: absolute;
+    top: 0;
+  }
+  
+  .leftEar {
+    -webkit-clip-path: polygon(24% 22%, 27% 46%, 35% 35%);
+    clip-path: polygon(24% 22%, 27% 46%, 35% 35%);
+    width: 600px;
+    height: 500px;
+    background: black;
+    position: absolute;
+    top: 0;
+  }
+  
+  .rightEar {
+    -webkit-clip-path: polygon(76% 22%, 66% 35%, 73% 46%);
+    clip-path: polygon(76% 22%, 66% 35%, 73% 46%);
+    width: 600px;
+    height: 500px;
+    background: black;
+    position: absolute;
+    top: 0;
+  }
+  
+  .leftEye {
+    -webkit-clip-path: polygon(44% 62%, 31% 57%, 37% 66%);
+    clip-path: polygon(44% 62%, 31% 57%, 37% 66%);
+    width: 600px;
+    height: 500px;
+    background: black;
+    position: absolute;
+    top: 0;
+  }
+  
+  .rightEye {
+    -webkit-clip-path: polygon(53% 62%, 68% 57%, 61% 66%);
+    clip-path: polygon(53% 62%, 68% 57%, 61% 66%);
+    width: 600px;
+    height: 500px;
+    background: black;
+    position: absolute;
+    top: 0;
+  }
+  
+  .nose {
+    -webkit-clip-path: polygon(56% 82%, 50% 79%, 44% 82%, 50% 89%);
+    clip-path: polygon(56% 82%, 50% 79%, 44% 82%, 50% 89%);
+    width: 600px;
+    height: 500px;
+    background: black;
+    position: absolute;
+    top: 0;
+  }
+  
+  .chin {
+    width: 600px;
+    height: 500px;
+    background: white;
+    position: absolute;
+    top: 0;
+    -webkit-clip-path: polygon(50% 89%, 31% 67%, 15% 75%, 50% 94%, 85% 74%, 68% 67%);
+    clip-path: polygon(50% 89%, 31% 67%, 15% 75%, 50% 94%, 85% 74%, 68% 67%);
+  }

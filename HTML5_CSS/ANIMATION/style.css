@@ -1,0 +1,24 @@
+.posFond {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px rgba(0,0,0,.5) solid;
+    background: url(imgages/header2.jpg) no-repeat -80px 200px;
+    transition: .5s all;
+}
+
+.posFond::after {
+    content: "Les Vacances!";
+    opacity: 0;
+    position: absolute;
+    right: -45px;
+    top: -10px;
+    transform: rotate(35deg);
+    font-size: 2em;
+    font-weight: 700;
+    background: #000;
+    color: #fff;
+    padding: .1em .5em;
+    border-radius: 10px;
+}

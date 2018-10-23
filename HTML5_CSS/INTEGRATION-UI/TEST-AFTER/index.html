@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .bar {
+            position:relative;
+            width:500px;
+            height:500px;
+            background:blue;
+            border-radius:2px;
+        }
+        .effet::before, .effet::after {
+            position:absolute;
+            border-radius:20px;
+            content:'';
+            top:47px;
+            left:-12px;
+            width:125px;
+            height:5px;
+            background:blueviolet;
+            transform:rotate(-45deg);
+            box-shadow: inset
+        }
+        .effet::after {
+            transform:rotate(45deg);
+        }
+    </style>
+    <div class="bar">
+        <div class="effet"></div>
+    </div>
+</body>
+</html>

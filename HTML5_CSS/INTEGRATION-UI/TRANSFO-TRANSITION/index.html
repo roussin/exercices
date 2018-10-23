@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* => RESET ********************************************* */
+
+    * {
+        box-sizing: border-box; 
+        padding: 0px;
+        outline: none;
+        border: none;
+        list-style: none;
+    }
+    ul, li{
+        padding: 0; 
+        margin: 0; 
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    .stopFloat::after{
+        display:block; 
+        content: ""; 
+        clear: both;
+    }
+
+    /* ****************************************************<= */
+    </style>
+</head>
+<body>
+    <style type="text/css">
+        .parent-transfo {
+            width: 200px;
+            height: 400px;
+            /* background: #333; */
+            margin: 5em auto;  
+            border: 2px solid black;
+            /* border-radius: 50%; */
+
+            perspective: 400px; /* pour que l'effet porte fonctionne */      
+            /* transform-style: preserve-3d; */
+        }
+        .transformation {
+            width: 100%x;
+            height: 100%;
+            background: rgba(255,0,0,.5);
+            border: 1px solid rgba(255,0,0,.8);
+            /* border-radius: 50%; */
+            transition-duration: 1s,4s;
+            /* transform:scale(1.5,.5); */ /* axe_x axe_y */
+
+            transform-origin: 0 0;
+            transform: rotateY(0deg); /* fait tourner sur l'axe Y effet porte ouverte*/
+  
+            /*transition-property: background,color,transform;
+            transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform:translateX(0);
+            transform: rotate(45deg); */
+
+            /* transform: rotate3d(1,-1,1,60deg); */
+        }
+
+        .transformation:hover {
+
+            /* background-color: lightblue;
+            color: aliceblue; */
+            transform: rotateY(-180deg);
+           /*  transform:translateX(100px); */
+        }
+
+        .logo {
+            width:100%;
+        }
+    </style>
+    <div class="parent-transfo">
+        <div class="transformation">
+           <!--  <div class="logo"><img src="logo/logo.png" alt="logo"></div> -->
+        </div>
+    </div>
+</body>
+</html>

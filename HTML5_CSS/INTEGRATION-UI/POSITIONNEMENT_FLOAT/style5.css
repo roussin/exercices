@@ -1,0 +1,42 @@
+main
+{
+    width:100%;
+    height: 700px;
+    background-color: beige;
+}
+
+aside /* SideBar Left */
+{
+    width: 25%;
+    height: 70%;
+    background-color: green;
+    float: left;
+}
+header
+{
+    width: 75%;
+    height:  30%;
+    background-color:  blue;
+    float: left;
+}
+article /* content */
+{
+    width: 50%;
+    height: 40%;
+    background-color:brown;
+    float: left;
+    }
+#sideBarRight
+{
+    width:  25%;
+    height: 70%;
+    background-color: orange;
+    float: right;
+}  
+footer
+{
+    width:  75%;
+    height: 30%;
+    background-color: yellow;
+    float: left;
+}  

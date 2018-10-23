@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container {
+            border:black 2px double;
+            border-radius: 10px;
+            display:flex; /* Impose le contexte globale de flexbox */
+            height:600px;
+            list-style:none;
+            margin:0;
+            padding:10px;
+            text-align: center;
+
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            justify-content: space-between;
+
+            
+        }
+        .container li {
+            border-radius: 10px;
+            width: 30%;
+            height: 200px;
+            border: black thin solid;
+            width: 100px; height: 150px;
+
+        }
+
+        ul :nth-child(1) { order:1; flex:1; align-self: flex-end;}
+        ul :nth-child(2) { order:2; align-self: flex-end;}
+        ul :nth-child(3) { order:3; align-self:center;}
+        ul :nth-child(4) { order:4; flex:2; align-self: flex-end;}
+        ul :nth-child(5) { order:5; flex: 3; align-self: flex-start;}
+        ul :nth-child(6) { order:6; align-self: flex-end;}
+
+        
+    </style>
+</head>
+<body>
+    <ul class="container">
+        <li style="background-color:lightblue;">bleu</li>
+        <li style="background-color:lightgreen;">vert</li>
+        <li style="background-color:orange;">orange</li>
+        <li style="background-color:purple;">violet</li>
+        <li style="background-color:yellow;">jaune</li>
+        <li style="background-color:maroon;">marron</li>
+    </ul>
+</body>
+</html>

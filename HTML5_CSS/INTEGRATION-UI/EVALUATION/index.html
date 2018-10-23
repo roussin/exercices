@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <title>Evaluation</title>
+    <style>
+    /* => RESET ************************************************************************ */
+    * {
+        box-sizing: border-box; 
+        padding: 0px;
+        outline: none;
+        border: none;
+        list-style: none;
+        font-family: 'Cabin', sans-serif;
+        
+    }
+    ul, li{
+        padding: 0; 
+        margin: 0; 
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    .stopFloat::after{
+        display:block; 
+        content: ""; 
+        clear: both;
+    }
+    img {
+        width: 100%;
+    }
+    /* => LES COMMUNS *************************************************************** */
+    </style>
+</head>
+<body>
+    <!-- ***************************************************************** -->
+    <style>
+        /* COMMUNS ******************************************************************* */
+        .container {
+            width: 100%;
+            height: 100%;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        .font-white {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .font-pink {
+            color: rgba(91, 50, 180, 0.9);
+        }
+        .text-size-S {
+            font-size: .7rem;
+            font-weight: 700;
+        }
+        .text-size-SL {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        .text-size-M {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        .text-size-L {
+            font-size: 4rem;
+            font-weight: 700;
+        }
+        .text-size-XL {
+            font-size: 11rem;
+            font-weight: 700;
+
+        }
+        .buton-2 {
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 20px 20px 20px 0;
+            padding: 10px 30px;
+        }
+        .buton-3 {
+            border: 1px solid rgba(155, 155, 155, 0.1);
+            border-radius: 20px 20px 20px 0;
+            padding: 10px 30px;
+        }
+        /* ****** HEADER ***************************************************************** */
+        .main-header {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 950px;;
+            background: url("images/header.png") no-repeat;
+            background-size: cover;
+        }
+            .header-box {
+                display: flex;
+                flex-direction: column;
+                width: 95%;
+                height: 100%;
+                color: rgba(255, 255, 255, 0.8);
+            }
+            .header-box a {
+                color: rgba(255, 255, 255, 0.8);
+            }
+                .top-bar {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 95%;
+                    height: 70px;
+                }
+                    .top-bar .menu {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 50%;
+                    }
+                .colorlib-box {
+                    position: relative;
+                    top: 10%;
+                    left: 15%;
+                    width: 50%;
+                }
+                    .colorlib-info {
+                        position: absolute;
+                        top: 26px;
+                        left: 13px;
+                    }
+                        .colorlib-box .lettre-C {
+                            color: rgba(149, 114, 232,.4);
+                        }
+                        .colorlib-info p { 
+                            margin-top: -40px;
+                        }
+                        .colorlib-info .text-size-S {
+                            font-size: .62rem;
+                        }
+                        .colorlib-info .buton-block {   
+                            margin-top: +70px;
+                        }
+                        .buton-1 { 
+                            border-radius: 20px;
+                            padding: 10px 30px 10px 10px;
+                            background: rgba(149, 114, 232,.5);
+                            margin-right: 5%;
+                        }
+                        .buton-block .buton-2 {
+                            background: rgb(251, 57, 125);
+                            border: none;
+                        }
+                        .buton-2:hover {
+                            background-color: rgb(251, 57, 125);
+                        }
+                        .menu a:hover {
+                            color: rgb(251, 57, 125);
+                            
+                        }
+                        .image-box {
+                            position: absolute;
+                            width: 80%;
+                            top: 50px;
+                            left: 350px;
+                            /* border: 1px solid white; */
+                        }
+
+        /* ****** SECTION-1 ***************************************************************** */
+
+        .section-1 {
+            text-align: center;
+            width: 100%;
+        }
+        .section-1 h2 {
+            margin-bottom: -2px;
+        }
+        .section-1 hr {
+            text-align: center;
+            background-color: rgb(251, 57, 125);
+            height: 1px;
+            width: 5%;
+        }
+        .section-1 .icone-box {
+            margin-top: 60px;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+        .section-1 .box {
+            width: 25%;
+            margin: 0 1%;
+            padding: 10px 30px;
+            border: 1px solid rgba(155, 155, 155, 0.1);
+            border-radius: 20px 20px 20px 0;
+        }
+
+        /* ****** SECTION-2 ***************************************************************** */
+
+        .section-2 {
+            width: 100%;
+        }
+        .section-2 .box-2 {
+            margin-top: 8%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .section-2 .image-2 {
+            width: 50%;
+        }
+        .section-2-box {
+            width: 30%;
+        }
+        .section-2 .link {
+            box-shadow: -5px 6px 2px 1px rgba(201, 201, 201, 0.1); 
+        }
+    </style>
+    <!-- ***************************************************************** -->
+    <div class="container">
+        <header class="main-header">
+            <div class="header-box">
+                <div class="top-bar">
+                    <div class="text-size-L">Ca.</div>
+                    <nav class="menu text-size-S">
+                        <a href="">Home</a>
+                        <a href="">About</a>
+                        <a href="">Features</a>
+                        <a href="">Screenshot</a>
+                        <a href="">Pricing</a>
+                        <a href="">Testimonials</a>
+                        <a href="">Team</a>
+                        <a href="">Contact</a>
+                    </nav>
+                    <div class="buton-2 text-size-S"><a href="#Contact">Sign Up Free</a></div>
+                </div>
+                <div class="colorlib-box">
+                    <div class="text-size-XL lettre-C">C</div>
+                    <div class="colorlib-info">
+                        <h1 class="colorlib text-size-L">Colorlib app</h1>
+                        <p class="text-size-S">Everything You Need. To Start Selling Online Beautifully</p>
+                        <div class="buton-block text-size-S">
+                            <a href="" class="buton-1">name@company.com</a>
+                            <a href="" class="buton-2">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="images/phone-header.png" alt="colorlib-app">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="section-1">
+            <h2 class="font-pink text-size-M">Why Is It Special</h2>
+            <hr>
+            <div class="icone-box">
+                <div class="box">
+                    <i class="fab fa-angellist"></i>
+                    <h3 class="font-pink text-size-SL">Easy to use</h3>
+                    <p class="text-size-S">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, unde?</p>
+                </div>
+                <div class="box">
+                    <i class="fab fa-angellist"></i>
+                    <h3 class="font-pink text-size-SL">Powerful Design</h3>
+                    <p class="text-size-S">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, unde?</p>
+                </div>
+                <div class="box">
+                    <i class="fab fa-angellist"></i>
+                    <h3 class="font-pink text-size-SL">Customizability</h3>
+                    <p class="text-size-S">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, unde?</p>
+                </div>
+            </div>
+        </section >
+        <section class="section-2">
+            <div class="box-2">
+                <div class="image-2">
+                    <img src="images/phone-header-2.png">
+                </div>
+                <div class="section-2-box">
+                    <div class="font-pink text-size-M">Our Best Propostions for You!</div>
+                    <p class="text-size-S">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio vitae et a. Quae perspiciatis vitae fuga nisi reiciendis maiores dicta sed autem mollitia. Omnis id doloribus ratione illo accusantium sunt exercitationem, ipsam, repellat cupiditate quisquam optio placeat aliquid minima quas vel blanditiis doloremque minus deleniti tempora, quaerat assumenda nostrum quibusdam.</p>
+                    
+                        <a href="" class="link buton-3">
+                            <i class="fab fa-android"></i><p class="text-size-S">available on<br />
+                            <span class="subtitle">Google Store</span></p>
+                        </a>
+                    
+                        <a href="" class="link buton-3">
+                            <i class="fab fa-apple"></i><p class="text-size-S">available on<br />
+                            <span class="subtitle">Apple Store</span></p>
+                        </a>
+                </div>
+        </section>
+    </div>
+</body>
+</html>

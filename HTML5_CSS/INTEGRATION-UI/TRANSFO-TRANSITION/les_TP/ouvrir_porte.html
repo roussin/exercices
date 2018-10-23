@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>TP-ouvrir-porte</title>
+    <style>
+
+    /* => RESET ********************************************* */
+
+    * {
+        box-sizing: border-box; 
+        padding: 0px;
+        outline: none;
+        border: none;
+        list-style: none;
+    }
+    ul, li{
+        padding: 0; 
+        margin: 0; 
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    .stopFloat::after{
+        display:block; 
+        content: ""; 
+        clear: both;
+    }
+
+    /* ****************************************************<= */
+
+   /*  Ex. 1 : Ouvrir la porte ************************************
+
+    Pour cet exercice :
+
+    nous allons utiliser les transformations et les transitions 
+    pour ouvrir la porte (dans le bon sens).
+    le survol de la souris représentera le fait que nous frappions 
+    à la porte et nous attendrons 4 secondes avant que quelqu'un nous ouvre.
+    la porte mettra 1 seconde à s'ouvrir entièrement de manière linéaire.
+    la porte mettra 4 secondes à se refermer entièrement après un délai 
+    de 2 secondes le temps de passer.
+    le début de la fermeture se fera doucement puis accélèrera 
+    avant de ralentir sur la fin.
+    information supplémentaire: il est possible d'indiquer des transitions 
+    différentes sur l'élément et sur son survol. 
+    
+    *********************************************************** */
+
+    </style>
+</head>
+<body>
+    <style type="text/css">
+        
+        .container{
+            width:100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contour-porte{
+            width:200px;
+            height:400px;;
+            border: 3px solid black;
+            perspective: 500px;
+            /* overflow: hidden; */
+        }
+        .porte{
+            position: absolute;
+            width:100%;
+            height:100%;
+            background: grey;
+            transform-origin: 0 0;
+            transform: rotateY(0deg);
+            transition-delay: cubic-bezier(0,2,0,4) 2s;
+            transition-duration: 4s; 
+        }
+
+        .porte p {
+            width: 80%;
+            font-size: 0.9em;
+            text-align: center;
+            border: 1px solid black;
+            margin: 5em auto;
+
+        }
+        .porte:hover{
+            /* transition-delay: 4s; */
+            transition-duration: 1s;
+            transform: rotateY(-160deg);
+        }
+
+        .poignee{
+            
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            background: #000;
+            border-radius: 50%;
+        }
+
+        .porte::after, .porte::before{
+            content: ".";
+            width: 10px;
+            height: 20px;
+            background: #999;
+            position: absolute;
+            left: -5px;
+        }
+
+        .porte::after {
+            top: 10%;
+        }
+        .porte::before {
+            top: 80%;
+        }
+    </style>
+    <div class="container">
+        <div class="contour-porte">
+            <div class="porte">
+                <p>BIENVENU CHEZ MOI</p>
+                <div class="poignee"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

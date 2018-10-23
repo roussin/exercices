@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- ****** début <style> **************************************************************-->
+    <style>
+    /* => RESET ************************************************************************ */
+    * {
+        box-sizing: border-box; 
+        padding: 0px;
+        outline: none;
+        border: none;
+        list-style: none;
+        font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    }
+    ul, li{
+        padding: 0; 
+        margin: 0; 
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    .stopFloat::after{
+        display:block; 
+        content: ""; 
+        clear: both;
+    }
+    img {
+        width: 100%;
+    }
+    /* => LES COMMUNS *************************************************************** */
+    .container {
+        width: 100%;
+        height: 100vh;
+    }
+    .lettre-Capital {
+        text-transform: uppercase;
+    }
+    .graisse {
+        font-weight: 700;
+    }
+    .centrage-hori {
+        width: 100%;
+        max-width: 1250px/* 1920px */;
+        margin: 0 auto;
+    }
+    .centrage-verti {
+        margin: auto;
+    }
+    .sur-text {
+        color: rgba(85, 85, 85, 0.5);
+        letter-spacing: .1rem;
+        font-size: .5rem;
+    }
+    .sous-titre {
+        letter-spacing: .1rem;
+        font-size: 2.5rem;
+    }
+    /* ********************************************************************************
+                    HEADER 
+    ********************************************************************************* */
+    .header {
+        display: flex;
+        width: 100%;
+        height: 75px;
+    }
+    .aligne-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo-box {
+        display: flex;
+        align-items: center;
+    }
+        .nom-logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: .1rem;
+            color: rgb(85, 85, 85);
+        }
+    .nav {
+        width: 50%;
+
+    }
+    .nav .menu {
+        display: flex;
+        justify-content: space-between; 
+        font-size: .8rem;
+    }
+    .nav .menu a { 
+        color: rgb(85, 85, 85);
+        letter-spacing: .1rem;
+        padding-left: 3%;
+        font-weight: 600;
+    }
+    .nav .menu a:hover {
+        color: rgba(3, 196, 235, 0.9);
+    }
+    /* ********************************************************************************
+                    SECTION 1 - BANDEAU IMAGE AVEC LIEN
+    ********************************************************************************* */
+    .section-1 {
+        display: flex;
+        width: 100%;
+        height: 680px;
+        background: url("./images/image-header.jpg") no-repeat;
+        background-size: cover;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    .section-1 .titre {
+        
+        letter-spacing: .1rem;
+        font-size: 4.5rem;
+        margin-bottom: 0.9375rem;
+    }
+    .section-1 .paragraphe {
+        font-style: italic;
+        margin-bottom: 1.9375rem;
+    }
+    .section-1 .link-box {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+    .section-1 .bouton {
+        border-radius: 2px;
+        padding: .75rem 1.5rem;
+    }
+    .section-1 .link-1 {
+        background: rgba(3, 196, 235, 0.9);
+        border: 1px solid rgba(3, 196, 235, 0.9);
+        margin-right: 2%;
+        color:rgba(255, 255, 255, 0.9);
+    }
+    .section-1 .link-2 {
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        color:rgba(255, 255, 255, 0.9);
+    }
+    .section-1 .link-1:hover {
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        background: none;
+    }
+    .section-1 .link-2:hover {
+        background: rgba(3, 196, 235, 0.9);
+        border: 1px solid rgba(3, 196, 235, 0.9);
+    }
+    /* ********************************************************************************
+                    SECTION 2 - FEATURES
+    ********************************************************************************* */
+    .section-2 {
+        display: flex;
+        width: 100%;
+        height: 527px;
+        text-align: center;
+        /* color: rgb(85, 85, 85); */
+    }
+       
+    </style>
+
+<!-- ****** fin <style> **************************************************************-->
+    <div class="container">
+        <!-- ********************************************************************************
+                        HEADER 
+        ********************************************************************************* -->
+        <header class="header">
+            <div class="centrage-hori aligne-header">
+                <div class="logo-box">
+                    <div class="logo"><img src="images/logo.png"></div>
+                    <div class="nom-logo lettre-Capital">ONEPRESS</div>
+                </div> 
+                <div class="nav">
+                    <nav class="menu lettre-Capital">
+                        <a href="">FEATURES</a>
+                        <a href="">ABOUT</a>
+                        <a href="">SERVICES</a>
+                        <a href="">SHOWREEL</a>
+                        <a href="">GALLERY</a>
+                        <a href="">TEAM</a>
+                        <a href="">NEWS</a>
+                        <a href="">CONTACT</a>
+                        <a href="">SHOP</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- ********************************************************************************
+                        SECTION 1 - BANDEAU IMAGE AVEC LIEN
+        ********************************************************************************* -->
+        <section class="section-1">
+            <div class="centrage-hori centrage-verti">
+                <!-- image en background -->
+                <div class="titre lettre-Capital graisse">WE ARE RESPONSIVE</div>
+                <div class="paragraphe">Lorem ipsum dolor sit amet <span class="graisse">consectetur adipisicing</span> elit.<br />
+                    Inventore dolorum architecto vitae modi a, exercitationem animi, 
+                    sed, esse perspiciatis dicta ad.</div>
+                <div class="link-box">
+                    <a class="bouton link-1 graisse lettre-Capital" href="">OUR SERVICES</a>
+                    <a class="bouton link-2 graisse lettre-Capital"href="">GET STARTED</a>
+                </div>
+            </div>
+        </section>
+        <!-- ********************************************************************************
+                        SECTION 2 - FEATURES
+        ********************************************************************************* -->
+        <section class="section-2">
+            <div class="centrage-hori centrage-verti">
+                <h2 class="sur-texte lettre-Capital graisse">WHY CHOOSE US</h2>
+                <div class="sous-titre lettre-Capital graisse">FEATURES</div>
+                <div class="block-images">
+                    <img src="" alt="">
+                    <p><strong>Responsive Design</strong><br />Lorem ipsum dolor, 
+                    sit amet consectetur adipisicing elit. Ducimus dolore facere tempora!</p>
+                </div>
+                <div class="block-images">
+                    <img src="" alt="">
+                    <p><strong>Parallax Effect</strong><br />Lorem ipsum dolor, 
+                    sit amet consectetur adipisicing elit. Ducimus dolore facere tempora!</p>
+                </div>
+                <div class="block-images">
+                    <img src="" alt="">
+                    <p><strong>Woo Commerce</strong><br />Lorem ipsum dolor, 
+                    sit amet consectetur adipisicing elit. Ducimus dolore facere tempora!</p>
+                </div>
+                <div class="block-images">
+                    <img src="" alt="">
+                    <p><strong>Content Block</strong><br />Lorem ipsum dolor, 
+                    sit amet consectetur adipisicing elit. Ducimus dolore facere tempora!</p>
+                </div>
+            </div>
+        </section>
+        <!-- ********************************************************************************
+                        SECTION 3 - ABOUT US
+        ********************************************************************************* -->
+        <!-- <section class="section">
+            <p class="sur-texte">SECTION SUBTILE</p>
+            <p class="sous-titre"><strong>ABOUT US</strong></p>
+            <p class="sous-texte">We provide <em>creative solutions</em> to clients around the world, creating thing that get attention and meaningful.</p>
+            <div class="block-images">
+                <img src="" alt="">
+                <p><strong>Our History</strong><br />Lorem ipsum dolor, 
+                sit amet consectetur adipisicing elit. Ducimus dolore facere tempora!</p>
+            </div>
+            <div class="block-images">
+                <img src="" alt="">
+                <p><strong>Our Vision</strong><br />Lorem ipsum dolor, 
+                sit amet consectetur adipisicing elit. Ducimus dolore facere tempora!</p>
+            </div>
+        </section> -->
+        <!-- ********************************************************************************
+                        SECTION 4 - OUR SERVICES
+        ********************************************************************************* -->
+        <!-- <section class="section">
+            <p class="sur-texte">SECTION SUBTILE</p>
+            <p class="sous-titre"><strong>OUR SERVICES</strong></p>
+            <p class="sous-texte">We provide <em>creative solutions</em> to clients around the world, creating thing that get attention and meaningful.</p>
+            <div class="block-images">
+                <img src="" alt="">
+                <p><strong>Service Title #1</strong><br />Lorem ipsum dolor, 
+                sit amet consectetur adipisicing elit. Ducimus dolore facere tempora!</p>
+            </div>
+            <div class="block-images">
+                <img src="" alt="">
+                <p><strong>Service Title #2</strong><br />Lorem ipsum dolor, 
+                sit amet consectetur adipisicing elit. Ducimus dolore facere tempora!</p>
+            </div>
+            <div class="block-images">
+                <img src="" alt="">
+                <p><strong>Service Title #3</strong><br />Lorem ipsum dolor, 
+                sit amet consectetur adipisicing elit. Ducimus dolore facere tempora!</p>
+            </div>
+            <div class="block-images">
+                <img src="" alt="">
+                <p><strong>Service Title #4</strong><br />Lorem ipsum dolor, 
+                sit amet consectetur adipisicing elit. Ducimus dolore facere tempora!</p>
+            </div>
+        </section> -->
+        <!-- ********************************************************************************
+                        SECTION 5 - BANDEAU IMAGE - PARALLAX EFFECT
+         ********************************************************************************* -->
+        <!--<section class="section-5">
+            <div class="block-images">
+                <img src="" alt="">
+            </div>
+            <p>PARALLAX EFFECT - PERFECTED</p>
+        </section> -->
+        <!-- ********************************************************************************
+                        SECTION 6 - GALLERY
+        ********************************************************************************* -->
+        <!-- <section class="section">
+            <p class="sur-texte">SECTION SUBTILE</p>
+            <p class="sous-titre"><strong>GALLERY</strong></p>
+            <p class="sous-texte">NEW : Gallery cestion support advanced layouts : Grid, Slider, Carousel, Masonry, Justified.</p>
+            <div class="block-images">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </section> -->
+    </div>
+</body>
+</html>

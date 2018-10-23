@@ -1,0 +1,64 @@
+html 
+{
+    
+}
+body 
+{
+    font-size: 20px;
+    font-family:'Exo', sans-serif;
+}
+/* HEADER */
+header
+{
+    height: 100px;
+}
+/* hgroupe */
+hgroupe
+{
+    text-align: center;
+}
+hgroupe > h1 
+{
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+/* MAIN */
+main
+{
+    background-image: url(assets/images/img.jpg);
+    background-size: cover;
+    background-position: right;
+    border-radius: 0px 50px 50px 0px;
+}
+div {
+    width: 400px;
+    background-color: rgba(8, 88, 255,0.5);
+
+    border: 1px solid;
+    border-top: none;
+    border-left: none;
+    border-radius: 0px 50px 50px 0px;
+    padding: 10px;
+    box-shadow: 1px 2px rgba(0,0,0,0.5) , 1px 2px rgba(0,0,0,0.5);
+}
+body {
+font-family: 'Exo', sans-serif;
+}
+html {
+font-size: 20px;
+}
+
+
+}
+p > strong {
+    font-weight:700; /*Equivalent au mot-clé "bold".*/
+}
+p > span {
+    font-weight:bolder; /* Permet d'indiquer que l'élément ciblé prendra la graisse supérieure à celle de l'élément parent. */
+    font-style:italic; /* normal (par défaut) | italic | oblique */
+}
+/* FOOTER */
+footer
+{
+    height: 100px;
+}

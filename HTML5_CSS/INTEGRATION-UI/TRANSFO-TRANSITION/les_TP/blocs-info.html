@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>TP-ouvrir-porte</title>
+    <style>
+
+    /* => RESET ********************************************* */
+
+    * {
+        box-sizing: border-box; 
+        padding: 0px;
+        outline: none;
+        border: none;
+        list-style: none;
+    }
+    ul, li{
+        padding: 0; 
+        margin: 0; 
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    .stopFloat::after{
+        display:block; 
+        content: ""; 
+        clear: both;
+    }
+
+    /* ****************************************************<= */
+
+   /*  Ex. 2 : Blocs d'informations ************************************
+
+    Pour cet exercice :
+
+    nous allons utiliser les transformations et les transitions pour 
+    afficher le bloc d'informations sur l'image survolée.
+    le bloc est caché en bas de l'image par défaut.
+    le bloc doit s'afficher en glissant vers le haut.
+    le bloc doit mettre 0.3 secondes à s'afficher.
+    le bloc ne faisant pas 100% de la hauteur de l'image, 
+    il doit rester aligné en bas de l'image.
+    
+    *********************************************************** */
+
+    </style>
+</head>
+<body>
+    <style type="text/css">
+        
+        .container{
+            width:100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2em;
+        }
+
+        .box{
+            overflow: hidden;
+
+            border: 2px solid rgba(0,0,0,.8);
+            width:33%;
+            height:10vh;
+            display: flex;  
+        }
+        .box:nth-of-type(1){
+            background:rgba(253, 254, 254);
+        }
+        .box:nth-of-type(2){
+            
+        }
+        .box:nth-of-type(3){
+            
+        }
+        .box:nth-of-type(4){
+            
+        }
+
+        .info p{      
+            background:rgba(17, 97, 17,.1);
+            padding: 1%;
+
+            width:100%;
+            height:10vh;
+
+            transition-duration: 4s;
+            transform: translateY(100px);
+        }
+        .box:hover p{
+            transition-duration: 2s;
+            transform: translateY(0px);
+        }
+
+    </style>
+    <div class="container">
+        <nav class="nav">
+            <div class="box">
+                <div class="info"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, veniam. Aut quos, tempore nemo maiores repellat tenetur hic mollitia aliquam?</p></div>
+            </div>
+            <div class="box">
+                <div class="info"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, eum.</p></div>
+            </div>
+        <!--  <div class="button"><img src="../logo/logo.png" alt="logo"></div> -->
+            <div class="box">
+                <div class="info"><p>Lorem ipsum dolor sit amet.</p></div>
+            </div>
+            <div class="box">
+                <div class="info"><p>Lorem ipsum dolor sit amet.</p></div>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>

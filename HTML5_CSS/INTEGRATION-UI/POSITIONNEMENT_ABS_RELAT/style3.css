@@ -1,0 +1,60 @@
+main {
+    width:100%;
+    height: 700px;
+    background-color: beige;
+    position: relative;
+}
+
+aside { /*sideBar left*/
+    width: 25%;
+    height: 100%;
+    background-color: green;
+}
+
+div { /* container header content article*/
+    width: 50%;
+    height:100%;
+    background-color:  rgb(113, 113, 189);
+    position: absolute;
+    top: 0px;
+    left: 25%;
+}
+
+header { /* header*/
+    width: 100%;
+    height:  25%;
+    background-color:  blue;
+}
+.content
+{
+    width: 100%;
+    height: 75%;
+    position: absolute;
+    top:25%;
+    left: 0px;
+}
+    content { /*content left*/
+        width: 50%;
+        height: 100%;
+        background-color: yellow;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    article { /*content right*/
+        width: 50%;
+        height: 100%;
+        background-color:brown;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    } 
+
+footer { /*sidebar right*/
+    width:  25%;
+    height: 100%;
+    background-color: orange;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
