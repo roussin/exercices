@@ -1,0 +1,31 @@
+.contain {
+    
+    background-color: rgb(15, 157, 223);
+}
+.formulaire {
+
+    display: flex;
+    justify-content: center;
+    background-color: blanchedalmond;
+}
+.containTab {
+
+    display: flex;
+    justify-content: center;
+}
+.tab {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: rgb(162, 170, 185);
+}
+ caption {
+
+    padding: 2em;
+ }
+.tr . th {
+
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
