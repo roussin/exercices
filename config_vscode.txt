@@ -1,10 +1,17 @@
 $ code --list-extensions | xargs -L 1 echo code --install-extension
+
 code --install-extension akamud.vscode-theme-onedark
+code --install-extension AlanWalk.markdown-toc
+code --install-extension bat67.markdown-extension-pack
 code --install-extension batisteo.vscode-django
+code --install-extension bierner.markdown-emoji
 code --install-extension bmewburn.vscode-intelephense-client
+code --install-extension darkriszty.markdown-table-prettify
+code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension donjayamanne.jupyter
 code --install-extension donjayamanne.python-extension-pack
+code --install-extension DotJoshJohnson.xml
 code --install-extension ecmel.vscode-html-css
 code --install-extension eg2.tslint
 code --install-extension Equinusocio.vsc-material-theme
@@ -13,6 +20,7 @@ code --install-extension felixfbecker.php-intellisense
 code --install-extension felixfbecker.php-pack
 code --install-extension formulahendry.code-runner
 code --install-extension formulahendry.vscode-mysql
+code --install-extension goessner.mdmath
 code --install-extension graf009.Eagle-Oceanic-Next
 code --install-extension GrapeCity.gc-excelviewer
 code --install-extension johnpapa.Angular2
@@ -33,8 +41,11 @@ code --install-extension ritwickdey.LiveServer
 code --install-extension robertohuertasm.vscode-icons
 code --install-extension sadeghpm.sql-snippets
 code --install-extension Shan.code-settings-sync
+code --install-extension shd101wyy.markdown-preview-enhanced
 code --install-extension tomoki1207.pdf
 code --install-extension VisualStudioExptTeam.vscodeintellicode
 code --install-extension whatwedo.twig
 code --install-extension wholroyd.jinja
+code --install-extension yzane.markdown-pdf
+code --install-extension yzhang.markdown-all-in-one
 code --install-extension zhuangtongfa.Material-theme
