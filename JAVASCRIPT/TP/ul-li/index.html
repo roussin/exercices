@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ul-li</title>
+</head>
+<body>
+    <h1>Changements d'attributs et méthode getElementsByTagName</h1>
+    <ul onClick="change_liste()">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+    </ul>
+    <script type="text/javascript">            
+        //<![CDATA[            
+        function change_liste() {                
+            // Récupérez l'objet de liste à l'aide d'une méthode ​getElementsByTagName​
+            let ul = document.getElementsByTagName('ul');
+            //console.log(ul); 
+            // Récupérez la collection d'items de liste à l'aide d'une méthode.
+            let li = ul[0].children;
+            //console.log(li);
+            ul[0].setAttribute("type", "circle"); 
+            // Pour chaque élément de liste, changez le texte en "​blabla​"
+            for(let i=0 ; i < li.length ; i++) {
+                li[i].textContent = "blabla";
+            }
+            // Affectez à l'attribut onclick​ un appel à une boîte d'alerte avec un petit texte.
+            ul[0].setAttribute("onclick", "alert('exercice finiiiiiiiiii!!!!')");
+        }           
+        //]]>        
+    </script>
+</body>
+</html>

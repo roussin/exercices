@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+        <title>Le Javascript - Mise en pratique</title> 
+        
+        <script type="text/javascript">            
+            //<![CDATA[            
+            function ajout() {                
+                //Code à écrire... 
+                //let liste = document.querySelector('#listecommissions');
+                //console.log(liste);
+                //let nouvelleListe = document.createElement('li');
+                //console.log(nouvelleListe);
+                //let texteListe = liste.appendChild(nouvelleListe).textContent = "un pack de krauQuiTache";
+                //console.log(texteListe);
+            }            
+            function ajouter() {                
+                // Code à écrire 
+                //Le chemin d'acces à l'ID listecommissions
+                let liste = document.querySelector('#listecommissions');
+                //console.log(liste);
+                //on place dans la variable listeAjout le contenu de la value qui se trouve à l'ID course
+                let listeAjout = document.querySelector('#course').value;
+
+                let regex = new RegExp("[a-zA-Z0-9]");
+
+                // Si le champ value n'est pas vide
+                if(listeAjout && (listeAjout === regex)) {
+                    let li = document.createElement('li');
+                    liste.appendChild(li).textContent = listeAjout;
+                }
+            }            
+            function supprimer() {                
+                // le noeud parent 
+                let myParent = document.querySelector('#listecommissions');
+                //console.log(myParent);
+                // le noeud enfant
+                let toRemove = myParent.lastChild;
+                console.log(toRemove);
+                let type = toRemove.nodeType;
+                console.log(type);
+
+                // Si le noeud est different de null
+                if(toRemove.previousSibling !== null) {
+
+                    if(type === 3){
+
+                        // si le noeud est un text -> supprimer le texte + la balise li 
+                        myParent.removeChild(toRemove);
+                        myParent.removeChild(myParent.lastChild);   
+
+                    } else {
+
+                        // sinon ne supprimer que la balise li
+                        myParent.removeChild(toRemove);
+                    }
+                }     
+            }            
+            //]]>        
+        </script>
+        
+    </head>
+    <!--onClick="ajout()"-->
+    <body>
+        <h1>Le Javascript - Mise en pratique</h1>
+        <input id="course" type="text" value="" />
+        <input onClick="ajouter()" type="button"value="OK" />
+        <input onClick="supprimer()" type="button" value="Supprimer le dernier élément" />
+        
+        <ul id="listecommissions">
+            <li>1kg de farine</li>
+            <li>un pack de lait</li>
+        </ul>
+        <!-- 
+            Dans un premier temps, complétez uniquement la fonction 'ajout()' avec votre code Javascript. Cette fonction sera appelé au
+        clic sur la page :
+        - 1.Sélectionnez la liste d'identifiant 'listecommissions'
+        - 2.Créez un nouvel item de liste et affectez
+        lui un texte
+        - 3.Ajoutez ce nouvel élément à la liste
+
+            Dans un second temps,complétez les fonction s'ajouter()'et'supprimer()'avec votre code Javascript. Ces fonctions seront appelées
+        au clic sur les boutons.
+        - 1.Commentez l'attribut 'onClick' de la balise 'body'
+        - 2.Décommentez les balises 'input'
+        - 3.Copier le code de la fonction 'ajout()' dans la fonction 'ajouter()' et modifier le afin defaire en sorte que le texte ajouté
+        à la liste soit saisi à partir du champ texte (nousn'autorisons pas d'ajout d'élément vide)
+        - 4.Complétez la fonction
+        'supprimer()' afin de faire en sorte que le dernier élément de lacible 'data-target' soit supprimé lorsque l'on clique
+        sur le bouton
+        - 5.Modifier les fonctions 'ajouter()' et 'supprimer()' afin de pouvoir aussi supprimer unélément lorsque
+        l'on clique sur ce dernier 
+        -->
+    </body>
+</html>
