@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+        <title>Lightbox - Le Javascript - Mise en pratique</title>
+
+        <!-- // highlight.js : Coloration syntaxique du code -->
+        <link rel="stylesheet" type="text/css" href="../../_assets/plugins/highlight/styles/monokai_sublime.css">
+        <script type="text/javascript" src="../../_assets/plugins/highlight/highlight.pack.js"></script>
+        <script type="text/javascript">
+            hljs.;
+        </script>
+        <!-- // -->
+
+        <link rel="stylesheet" type="text/css" href="../../_assets/css/style.css">
+
+        <style type="text/css">
+            body {
+                margin:0;
+                padding:0;
+            }
+                #thumb-wrapper {
+                    margin:0;
+                    max-width:150px;
+                    padding:0;
+                    text-align:center;
+                }
+        </style>
+    </head>
+    </head>
+
+    <body>
+        <h1>Le Javascript - Mise en pratique</h1>
+        <p><em></em></p>
+        <hr>
+        <h2>Le gestionnaire d'événements</h2>
+        <h3>Lightbox</h3>
+        <p><em>Pour cet exercice :</em></p>
+        <ol style="font-style:italic;">
+            <li>Ajoutez un événement sur le clic de l'image préchargée. Cet événement doit créer un cadre :
+                <ul>
+                    <li>qui occupe 100% de la largeur et 100% de la hauteur</li>
+                    <li>qui a une opacité de 50% (en noir ou en blanc)</li>
+                    <li>qui affiche en son centre, dans un cadre de 80% de la largeur, l'image sur laquelle on a cliqué mais dans sa version grand format "assets/uploads/photo.jpg"</li>
+                </ul>
+            </li>
+            <li>Ajoutez un événement sur le cadre nouvellement créé pour qu'au clic, cela le supprime de l'affichage</li>
+        </ol>
+
+        <figure id="thumb-wrapper">
+            <img alt="" data-src="assets/uploads/photo.jpg" src="assets/uploads/photo.thumb.jpg">
+            <img alt="" data-src="http://p1.pichost.me/i/53/1768150.jpg" src="http://www.objectif3w.com/wp-content/uploads/2015/06/logo.png">
+        </figure>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var img = new Image; // On instancie un nouvel objet de type "Image"
+            console.log(img);
+            img.src = "assets/uploads/photo.thumb.jpg"; // On attribue la valeur "assets/uploads/photo.thumb.jpg" à la propriété "src" de l'objet
+            console.log(img);
+            //img.data-src = "assets/uploads/photo.jpg";
+            //console.log(img);
+            //img.data-src = "assets/uploads/photo.jpg"; // On attribue la valeur "assets/uploads/photo.jpg" à la propriété "data-src" de l'objet
+            
+
+            .addEventListener("click", function(event){
+                console.log(event);
+                //img.data-src = 'assets/uploads/photo.jpg';
+            })
+            //]]>
+        </script>
+    </body>
+</html>

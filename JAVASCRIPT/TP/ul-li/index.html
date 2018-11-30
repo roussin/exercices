@@ -31,9 +31,9 @@
             // Pour chaque élément de liste, changez le texte en "​blabla​"
             for(let i=0 ; i < li.length ; i++) {
                 li[i].textContent = "blabla";
+                // Affectez à l'attribut onclick​ un appel à une boîte d'alerte avec un petit texte.
+                li[i].setAttribute("onclick", "alert('bonjour je suis l\\\'item " + ( i + 1 ) + "')");
             }
-            // Affectez à l'attribut onclick​ un appel à une boîte d'alerte avec un petit texte.
-            ul[0].setAttribute("onclick", "alert('exercice finiiiiiiiiii!!!!')");
         }           
         //]]>        
     </script>

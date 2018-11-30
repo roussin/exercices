@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+        <title>Préchargement d'image - Le Javascript - Mise en pratique</title>
+
+        <!-- // highlight.js : Coloration syntaxique du code -->
+        <link rel="stylesheet" type="text/css" href="../../_assets/plugins/highlight/styles/monokai_sublime.css">
+        <script type="text/javascript" src="../../_assets/plugins/highlight/highlight.pack.js"></script>
+        <script type="text/javascript">
+            hljs.initHighlightingOnLoad();
+        </script>
+        <!-- // -->
+
+        <link rel="stylesheet" type="text/css" href="../../_assets/css/style.css">
+
+        <style type="text/css">
+            <!--
+            body {
+                margin:0;
+                padding:0;
+            }
+                #thumb-wrapper {
+                    margin:0;
+                    padding:0;
+                    text-align:center;
+                }
+                    #banner {
+                        height:auto;
+                        width:100%;
+                    }
+            -->
+        </style>
+    </head>
+
+    <body>
+        <h1>Le Javascript - Mise en pratique</h1>
+        <p><em></em></p>
+        <hr>
+        <h2>Le gestionnaire d'événements</h2>
+        <h3>Preloader d'image</h3>
+        <p><em>Pour cet exercice :</em></p>
+        <ol style="font-style:italic;">
+            <li>Commentez chaque action du script déjà écrit pour voir ce qu'il se passe avec le loader puis enlevez les commentaires</li>
+            <li>La fonction setTimeout nous permettra de simuler un chargement long via le web en temporisant notre action. Utilisez la pour ajouter votre code javascript.<br>Vous devrez faire en sorte que l'image de basse qualité soit remplacée par l'image de haute définition présente dans le dossier "assets/uploads/photo.jpg"</li>
+            <li>Modifier le script pour que toutes ces actions s'effectuent après le chargement complet de la page.</li>
+        </ol>
+        <figure id="thumb-wrapper"><img alt="Loading ..." id="loader" src="assets/img/loader.gif"></figure>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var loader = document.getElementById( 'loader' ); // On récupère l'élément d'ID "loader"
+            //loader.setAttribute( 'style', 'display:none;' ); // On cache le "loader" (jusque là il n'était présent que dans le cas où le javascript ne s'éxecute pas)
+
+            var wrapper = loader.parentNode; // On récupère le noeud parend du "loader"
+            var img = new Image; // On instancie un nouvel objet de type "Image"
+            img.id = 'banner'; // On attribue la valeur "banner" à la propriété "id" de l'objet
+            img.src = 'assets/uploads/photo.thumb.jpg'; // On attribue la valeur "assets/uploads/photo.thumb.jpg" à la propriété "src" de l'objet
+
+            wrapper.appendChild( img ); // On ajoute l'objet de type "Image" à la fin du noeud parend du "loader". Cela place a pour effet de placer une nouvelle balise HTML <img> dans la page
+
+            setTimeout( function() { // On lance un timer de 2 secondes suite à quoi ...
+                loader.setAttribute( 'style', 'display:none;' );
+                img.src = 'assets/uploads/photo.jpg';
+            }, 2000 );
+            //]]>
+        </script>
+    </body>
+</html>

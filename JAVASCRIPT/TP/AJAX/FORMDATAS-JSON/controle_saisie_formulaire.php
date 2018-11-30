@@ -1,0 +1,412 @@
+<?php
+    
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Le Javascript - Mise en pratique</title>
+
+    <link rel="stylesheet" type="text/css" href="../../_assets/css/style.css">
+
+    <style type="text/css">
+        fieldset {
+            border: none;
+            /*border-top:rgba(0,0,0,.5) .5px solid;border-top:rgba(0,0,0,.5) .05rem solid;*/
+            display: block;
+            margin: 10px auto;
+            margin: 1rem auto;
+            padding: 10px 0 0 0;
+            padding: 1rem 0 0 0;
+        }
+
+        fieldset legend {
+            display: inline-block;
+            margin: 0 auto;
+            padding: 10px 10px 10px 0;
+            padding: 1rem 1rem 1rem 0;
+        }
+
+        .fieldset {
+            border-color: rgb(199, 4, 119);
+            text-align: left;
+        }
+
+        .legend {
+            color: rgb(199, 4, 119);
+            font-size: 16px;
+            font-size: 1.6rem;
+            margin-left: 0;
+            text-align: left;
+        }
+
+        /* ------    formulaires    ------ */
+        input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+        textarea,
+        select {
+            /* transition */
+            -webkit-transition-delay: 0s;
+            -moz-transition-delay: 0s;
+            -ms-transition-delay: 0s;
+            -o-transition-delay: 0s;
+            transition-delay: 0s;
+            -webkit-transition-duration: .2s;
+            -moz-transition-duration: .2s;
+            -ms-transition-duration: .2s;
+            -o-transition-duration: .2s;
+            transition-duration: .2s;
+            -webkit-transition-timing-function: ease-in-out;
+            -moz-transition-timing-function: ease-in-out;
+            -ms-transition-timing-function: ease-in-out;
+            -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+        }
+
+        /* ------    boutons    ------ */
+        [data-role="button"],
+        [data-role="submit"] {
+            cursor: pointer;
+            position: relative;
+
+            /* sélection */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            /* transition */
+            -webkit-transition-delay: 0s;
+            -moz-transition-delay: 0s;
+            -ms-transition-delay: 0s;
+            -o-transition-delay: 0s;
+            transition-delay: 0s;
+            /* transition */
+            -webkit-transition-duration: .2s;
+            -moz-transition-duration: .2s;
+            -ms-transition-duration: .2s;
+            -o-transition-duration: .2s;
+            transition-duration: .2s;
+            -webkit-transition-timing-function: ease-in-out;
+            -moz-transition-timing-function: ease-in-out;
+            -ms-transition-timing-function: ease-in-out;
+            -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+        }
+
+        .form {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            text-align: left;
+        }
+
+        .form [data-role="wrapper"] {
+            display: inline-block;
+            margin: 0 0 7px 0;
+            margin: 0 0 .7rem 0;
+            overflow: visible;
+            padding: 0;
+            position: relative;
+            vertical-align: top;
+            width: 100%;
+        }
+
+        .form [data-role="wrapper"].moitie {
+            margin-left: .5%;
+            margin-right: .5%;
+            width: 49.5%;
+        }
+
+        .form [data-role="wrapper"].moitie:nth-child(2n+1) {
+            margin-left: 0;
+        }
+
+        .form [data-role="wrapper"].moitie:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        .form label {
+            vertical-align: middle;
+        }
+
+        .form [data-role="label"] {
+            color: rgb(0, 0, 0);
+            display: block;
+            padding: 4px 0;
+            padding: .4rem 0;
+        }
+
+        .form [data-role="label"].placeholder {
+            background-color: rgb(255, 255, 255);
+            bottom: 0;
+            font-style: italic;
+            left: 0;
+            padding: 4px 7px;
+            padding: .4rem .7rem;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .form [data-role="label"].required::after {
+            content: '*';
+            padding: 0 0 0 4px;
+            padding: 0 0 0 .4rem;
+        }
+
+        .form input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="submit"]):not([type="button"]),
+        .form textarea,
+        .form select {
+            background-color: rgba(255, 255, 255, .3);
+            border: rgb(0, 0, 0) thin solid;
+            color: rgb(0, 0, 0);
+            display: block;
+            line-height: normal;
+            padding: 4px 7px;
+            padding: .4rem .7rem;
+            position: relative;
+            vertical-align: middle;
+            width: 100%;
+
+            /* transition */
+            -webkit-transition-duration: .2s;
+            -moz-transition-duration: .2s;
+            -ms-transition-duration: .2s;
+            -o-transition-duration: .2s;
+            transition-duration: .2s;
+            -webkit-transition-timing-function: ease-in-out;
+            -moz-transition-timing-function: ease-in-out;
+            -ms-transition-timing-function: ease-in-out;
+            -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+        }
+
+        .form textarea {
+            resize: none;
+        }
+
+        .form select {
+            padding: 3.5px 7px;
+            padding: .35rem .7rem;
+        }
+
+        .form input[type="checkbox"],
+        .form input[type="radio"],
+        .form input[type="file"],
+        .form input[type="submit"],
+        .form input[type="button"] {
+            vertical-align: middle;
+        }
+
+        .form input[type="file"] {
+            border: none;
+            display: block;
+            line-height: normal;
+            position: relative;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        .form input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="submit"]):not([type="button"]):focus,
+        .form input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="submit"]):not([type="button"]):active,
+        .form input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="submit"]):not([type="button"]).selected,
+        .form textarea:focus,
+        .form textarea:active,
+        .form textarea.selected,
+        .form select:focus,
+        .form select:active,
+        .form select.selected {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .form [data-role="submit"] {
+            background-color: rgb(199, 4, 119);
+            border: none;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            display: inline-block;
+            font-size: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            line-height: normal;
+            margin: 5px 0;
+            margin: .5rem 0;
+            padding: 5px 7px;
+            padding: .5rem .7rem;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+
+            /* sélection */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            /* transition */
+            -webkit-transition-duration: .2s;
+            -moz-transition-duration: .2s;
+            -ms-transition-duration: .2s;
+            -o-transition-duration: .2s;
+            transition-duration: .2s;
+            -webkit-transition-timing-function: ease-in-out;
+            -moz-transition-timing-function: ease-in-out;
+            -ms-transition-timing-function: ease-in-out;
+            -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+        }
+
+        .form [data-role="submit"]:hover,
+        .form [data-role="submit"]:focus,
+        .form [data-role="submit"]:active {
+            background-color: rgb(255, 102, 51);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Le Javascript - Mise en pratique</h1>
+    <p><em></em></p>
+    <hr>
+    <h2>Le gestionnaire d'événements</h2>
+    <h3>Contrôle de formulaire</h3>
+
+    <form action="" class="form" id="registerform" method="post" name="registerform" novalidate="novalidate" role="register">
+        <fieldset class="fieldset">
+            <legend class="legend">Formulaire</legend>
+
+            <span data-role="wrapper">
+                <label class="required placeholder" data-role="label" for="user_nom">Nom</label>
+                <input class="input" id="user_nom" name="user_nom" required="required" tabindex="1" type="text" value="">
+            </span>
+            <span data-role="wrapper">
+                <label class="placeholder" data-role="label" for="user_pnom">Prénom</label>
+                <input class="input" id="user_pnom" name="user_pnom" tabindex="2" type="text" value="">
+            </span>
+
+            <span data-role="wrapper">
+                <label class="required placeholder" data-role="label" for="user_email">E-mail</label>
+                <input class="input" id="user_email" name="user_email" required="required" tabindex="3" type="email"
+                    value="">
+            </span>
+
+            <span data-role="wrapper">
+                <label class="required placeholder" data-role="label" for="user_tel">Téléphone</label>
+                <input class="input" id="user_tel" name="user_tel" required="required" tabindex="4" type="tel" value="">
+            </span>
+
+            <span data-role="wrapper">
+                <label class="required placeholder" data-role="label" for="user_age">Age</label>
+                <input class="input" id="user_age" name="user_age" required="required" tabindex="5" type="number" min="18"
+                    max="200" value="">
+            </span>
+
+            <span data-role="wrapper">
+                <label class="required" data-role="label" for="user_role">Rôle</label>
+                <select class="input" id="user_role" name="user_role" required="required" tabindex="6">
+                    <option value="Formateur">Formateur</option>
+                    <option value="Etudiant">Etudiant</option>
+                </select>
+            </span>
+
+            <span data-role="wrapper">
+                <label class="required" data-role="label" for="user_news">Souhaitez-vous recevoir les actualités ?</label>
+                <input class="input" id="user_news_oui" name="user_news" required="required" tabindex="7" type="radio"
+                    value="Oui"> <label for="user_news_oui">Oui</label>
+                <input class="input" id="user_news_non" name="user_news" required="required" tabindex="7" type="radio"
+                    value="Non"> <label for="user_news_non">Non</label>
+            </span>
+
+            <span data-role="wrapper">
+                <label class="required" data-role="label" for="user_choice">Options</label>
+                <input class="input" id="user_choice_1" name="user_choice[]" required="required" tabindex="8" type="checkbox"
+                    value="Option 1"> <label for="user_choice_1">Option 1</label>
+                <input class="input" id="user_choice_2" name="user_choice[]" required="required" tabindex="8" type="checkbox"
+                    value="Option 2"> <label for="user_choice_2">Option 2</label>
+                <input class="input" id="user_choice_3" name="user_choice[]" required="required" tabindex="8" type="checkbox"
+                    value="Option 3"> <label for="user_choice_3">Option 3</label>
+                <input class="input" id="user_choice_4" name="user_choice[]" required="required" tabindex="8" type="checkbox"
+                    value="Option 4"> <label for="user_choice_4">Option 4</label>
+            </span>
+
+            <span data-role="wrapper">
+                <label class="placeholder" data-role="label" for="user_comment">Commentaires</label>
+                <textarea class="input" id="user_comment" name="user_comment" tabindex="9"></textarea>
+            </span>
+
+            <br class="align-clear">
+            <input data-role="submit" id="submit" name="submit" type="submit" value="OK">
+        </fieldset>
+    </form>
+
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        
+        function getXHR() {
+            var xhr = null;
+
+            if( window.XMLHttpRequest ) {
+                xhr = new XMLHttpRequest();
+            } else if( window.ActiveXObject ) {
+                try {
+                    xhr = new ActiveXObject( 'Msxml2.XMLHTTP' );
+                } catch ( e ) {
+                    xhr = new ActiveXObject( 'Microsoft.XMLHTTP' );
+                }
+            } else {
+                alert( 'Votre navigateur ne supporte pas la technologie AJAX.' );
+            }
+
+            return xhr;
+        }
+
+        window.addEventListener('load', function () {
+            var inputs = document.querySelectorAll('.input');
+            for (let i = 0; i < inputs.length; i++) {
+                if (inputs[i].nodeName !== 'SELECT')
+                    inputs[i].addEventListener('focus', function (ev) {
+                        ev.target.select();
+                    });
+                inputs[i].addEventListener('blur', function (ev) {
+                    console.log(ev.target.value);
+                });
+            }
+
+            var forms = document.querySelectorAll('form');
+            for (let i = 0; i < forms.length; i++) {
+                forms[i].addEventListener('submit', function (ev) {
+                    var check = true;
+                    var required = this.querySelectorAll('[required]');
+
+                    for (let i = 0; i < required.length; i++) {
+                        if (required[i].type == 'radio' || required[i].type == 'checkbox') {
+                            var radios = document.getElementsByTagName(required[i].name);
+                            var checkRadio = false;
+                            for (let i = 0; i < radios.length; i++) {
+                                if (radios[i].checked) {
+                                    checkRadio = true;
+                                }
+                            }
+
+                            if (!checkRadio) {
+                                check = false;
+                            }
+                        }
+                        if (required[i].value == '') {
+                            check = false;
+                        }
+                    }
+                    if (check === false) {
+                        alert('Champs obligatoire');
+                        ev.preventDefault();
+                    }
+                });
+            }
+        });
+            /* ]]> */
+    </script>
+</body>
+
+</html>
